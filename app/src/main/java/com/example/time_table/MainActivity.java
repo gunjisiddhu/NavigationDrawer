@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
 
         return new SimpleItem(screenIcons[position],screenTitles[position])
                 .withIconTint(color(R.color.purple_200))
-                .withtextTint(color(R.color.black))
+                .withtextTint(color(R.color.teal_700))
                 .withSelectedIconTint(color(R.color.purple_200))
                 .withSelectedTextTint(color(R.color.purple_200));
     }
