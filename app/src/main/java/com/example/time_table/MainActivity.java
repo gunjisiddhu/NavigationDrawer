@@ -4,6 +4,7 @@ import androidx.annotation.ColorInt;
 
 import java.util.*;
 import androidx.annotation.ColorRes;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
@@ -11,9 +12,16 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
@@ -34,15 +42,22 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
 
     private SlidingRootNav slidingRootNav;
 
+
+    TextView workLoadInToolBar;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar=findViewById(R.id.toolbar);
-
-
-
+        //ToolBar
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        toolbar.setTitle("Section : "+"A"+" TimeTable");
+        workLoadInToolBar = findViewById(R.id.textViewinToolbar);
+        workLoadInToolBar.setText("");
 
         setSupportActionBar(toolbar);
         slidingRootNav = new SlidingRootNavBuilder(this)
@@ -123,6 +138,7 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
         if (position == POS_DASHBOARD){
+            getSupportActionBar().show();
             DashBoardFragment dashBoardFragment = new DashBoardFragment();
             transaction.replace(R.id.container, dashBoardFragment);
         }
@@ -146,5 +162,29 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
         slidingRootNav.closeMenu();
         transaction.addToBackStack(null);
         transaction.commit();
+    }
+
+
+
+
+    @Override
+    public boolean onCreateOptionsMenu(@NonNull Menu menu) {
+        getMenuInflater().inflate(R.menu.itemlist,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        switch(item.getItemId()){
+            case R.id.care:
+
+                break;
+            case R.id.logout:
+                //functionality implementation
+                break;
+        }
+
+        return true;
     }
 }
