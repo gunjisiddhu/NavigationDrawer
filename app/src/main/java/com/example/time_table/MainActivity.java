@@ -157,6 +157,7 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
         }
         else if(position== POS_LOGOUT){
             finish();
+            //test
         }
 
         slidingRootNav.closeMenu();
