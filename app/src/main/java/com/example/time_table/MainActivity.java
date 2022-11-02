@@ -12,16 +12,12 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
@@ -31,11 +27,13 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
 
     private static final int POS_CLOSE = 0;
     private static final int POS_DASHBOARD = 1;
-    private static final int POS_MY_PROFILE = 2;
-    private static final int POS_NEARBY_RES = 3;
-    private static final int POS_ABOUT_US = 5;
-    private static final int POS_SETTING = 4;
-    private static final int POS_LOGOUT = 7;
+    private static final int POS_OTHERS_TIMETABLE = 2;
+    private static final int POS_FACULTY_TIMETABLE = 3;
+    private static final int POS_WORKSPACE = 4;
+    private static final int POS_MISCELLANEOUS = 5;
+    private static final int POS_SETTINGS = 6;
+    private static final int POS_ABOUT_US = 7;
+    private static final int POS_LOGOUT = 8;
 
     private String[] screenTitles;
     private Drawable[] screenIcons;
@@ -77,11 +75,13 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
         DrawerAdapter adapter = new DrawerAdapter(Arrays.asList(createItemFor(
                 POS_CLOSE),
                 createItemFor(POS_DASHBOARD).setChecked(true),
-                createItemFor(POS_MY_PROFILE),
-                createItemFor(POS_NEARBY_RES),
-                createItemFor(POS_SETTING),
+                createItemFor(POS_OTHERS_TIMETABLE),
+                createItemFor(POS_FACULTY_TIMETABLE),
+                createItemFor(POS_WORKSPACE),
+                createItemFor(POS_MISCELLANEOUS),
+                createItemFor(POS_SETTINGS),
                 createItemFor(POS_ABOUT_US),
-                new SpaceItem(260),
+                new SpaceItem(190),
                 createItemFor(POS_LOGOUT)
 
         ));
@@ -142,19 +142,32 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
             DashBoardFragment dashBoardFragment = new DashBoardFragment();
             transaction.replace(R.id.container, dashBoardFragment);
         }
-        else if(position == POS_MY_PROFILE)
+        else if(position == POS_OTHERS_TIMETABLE)
         {
             MyProfileFragment myProfileFragment = new MyProfileFragment();
             transaction.replace(R.id.container, myProfileFragment);
         }
-        else if (position == POS_NEARBY_RES){
+        else if (position == POS_FACULTY_TIMETABLE){
             NearbyResFragment nearbyResFragment = new NearbyResFragment();
             transaction.replace(R.id.container, nearbyResFragment);
         }
-        else if (position==POS_SETTING){
+        else if(position==POS_WORKSPACE){
+            WorkspaceFragment workspaceFragment = new WorkspaceFragment();
+            transaction.replace(R.id.container, workspaceFragment);
+        }
+        else if(position==POS_MISCELLANEOUS){
+            MiscellaneousFragment miscellaneousFragment = new MiscellaneousFragment();
+            transaction.replace(R.id.container, miscellaneousFragment);
+        }
+        else if (position== POS_SETTINGS){
             SettingsFragment settingsFragment = new SettingsFragment();
             transaction.replace(R.id.container,settingsFragment);
         }
+        else if(position == POS_ABOUT_US){
+            Aboutus_fragment aboutus_fragment = new Aboutus_fragment();
+            transaction.replace(R.id.container,aboutus_fragment);
+        }
+
         else if(position== POS_LOGOUT){
             finish();
             //test

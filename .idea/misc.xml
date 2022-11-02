@@ -3,17 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/tpvkr/AndroidStudioProjects/Time_Table/app/src/main/res/drawable/ic_baseline_about_us_icon_24.xml" value="0.155" />
         <entry key="..\:/Users/tpvkr/AndroidStudioProjects/Time_Table/app/src/main/res/drawable/ic_baseline_class_24.xml" value="0.1" />
         <entry key="..\:/Users/tpvkr/AndroidStudioProjects/Time_Table/app/src/main/res/drawable/ic_baseline_dashboard_24.xml" value="0.1" />
         <entry key="..\:/Users/tpvkr/AndroidStudioProjects/Time_Table/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/tpvkr/AndroidStudioProjects/Time_Table/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Users/tpvkr/AndroidStudioProjects/Time_Table/app/src/main/res/drawable/ic_workspace.xml" value="0.155" />
+        <entry key="..\:/Users/tpvkr/AndroidStudioProjects/Time_Table/app/src/main/res/layout/aboutus_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/tpvkr/AndroidStudioProjects/Time_Table/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/tpvkr/AndroidStudioProjects/Time_Table/app/src/main/res/layout/dashboard_fragment.xml" value="0.1" />
         <entry key="..\:/Users/tpvkr/AndroidStudioProjects/Time_Table/app/src/main/res/layout/drawer_menu.xml" value="0.4" />
         <entry key="..\:/Users/tpvkr/AndroidStudioProjects/Time_Table/app/src/main/res/layout/item_option.xml" value="0.1" />
+        <entry key="..\:/Users/tpvkr/AndroidStudioProjects/Time_Table/app/src/main/res/layout/miscellaneous_fragment.xml" value="0.253125" />
         <entry key="..\:/Users/tpvkr/AndroidStudioProjects/Time_Table/app/src/main/res/layout/near_by_res.xml" value="0.1" />
         <entry key="..\:/Users/tpvkr/AndroidStudioProjects/Time_Table/app/src/main/res/layout/profile_fragment.xml" value="0.1" />
         <entry key="..\:/Users/tpvkr/AndroidStudioProjects/Time_Table/app/src/main/res/layout/settings_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/tpvkr/AndroidStudioProjects/Time_Table/app/src/main/res/layout/toolbar.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/tpvkr/AndroidStudioProjects/Time_Table/app/src/main/res/layout/workspace_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/tpvkr/AndroidStudioProjects/Time_Table/app/src/main/res/mipmap-anydpi-v26/Dashboard_image.xml" value="0.155" />
+        <entry key="..\:/Users/tpvkr/AndroidStudioProjects/Time_Table/app/src/main/res/mipmap-anydpi-v26/Dashboard_image_round.xml" value="0.1" />
       </map>
     </option>
   </component>

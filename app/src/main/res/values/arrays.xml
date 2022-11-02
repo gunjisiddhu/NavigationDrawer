@@ -4,11 +4,12 @@
     <string-array name="id_activityScreenTitles">
         <item></item>
         <item>DashBoard</item>
-        <item>My Profile</item>
-        <item>NearBy</item>
+        <item>Others Timetable</item>
+        <item>Faculty Timetable</item>
+        <item>Workspace</item>
+        <item>Miscellaneous</item>
         <item>Settings</item>
         <item>About Us</item>
-        <item/>
         <item>Log Out</item>
     </string-array>
 
@@ -17,9 +18,10 @@
         <item>@drawable/ic_baseline_dashboard_24</item>
         <item>@drawable/ic_baseline_class_24</item>
         <item>@drawable/ic_baseline_near_me_24</item>
+        <item>@drawable/ic_baseline_near_me_24</item>
+        <item>@drawable/ic_baseline_near_me_24</item>
         <item>@drawable/ic_baseline_settings_24</item>
         <item>@drawable/ic_baseline_about_us_icon_24</item>
-        <item>0</item>
         <item>@drawable/ic_baseline_logout_24</item>
     </string-array>
 

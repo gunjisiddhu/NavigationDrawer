@@ -5,16 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-public class MyProfileFragment extends Fragment {
+public class WorkspaceFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.profile_fragment, container, false);
-
-
-        //((AppCompatActivity) getActivity()).getSupportActionBar().hide();
+        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.workspace_fragment, container, false);
         return root;
     }
 }
