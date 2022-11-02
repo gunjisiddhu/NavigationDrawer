@@ -15,11 +15,11 @@
 
     <string-array name="id_activityScreenIcons">
         <item>@drawable/ic_baseline_close_24</item>
-        <item>@drawable/ic_baseline_dashboard_24</item>
-        <item>@drawable/ic_baseline_class_24</item>
-        <item>@drawable/ic_baseline_near_me_24</item>
-        <item>@drawable/ic_baseline_near_me_24</item>
-        <item>@drawable/ic_baseline_near_me_24</item>
+        <item>@drawable/ic_dashboard</item>
+        <item>@drawable/ic_others_timetable</item>
+        <item>@drawable/ic_facultytt</item>
+        <item>@drawable/ic_workspace</item>
+        <item>@drawable/ic_miscellaneous</item>
         <item>@drawable/ic_baseline_settings_24</item>
         <item>@drawable/ic_baseline_about_us_icon_24</item>
         <item>@drawable/ic_baseline_logout_24</item>
