@@ -40,6 +40,10 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar=findViewById(R.id.toolbar);
+
+
+
+
         setSupportActionBar(toolbar);
         slidingRootNav = new SlidingRootNavBuilder(this)
                 .withDragDistance(180)
@@ -89,13 +93,15 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
         ta.recycle();
         return icons;
     }
-    private Draweritem createItemFor(int position){
-
+    private DrawerItem createItemFor(int position){
         return new SimpleItem(screenIcons[position],screenTitles[position])
-                .withIconTint(color(R.color.purple_200))
-                .withtextTint(color(R.color.black))
-                .withSelectedIconTint(color(R.color.purple_200))
-                .withSelectedTextTint(color(R.color.purple_200));
+                .withIconTint(color(R.color.purple_lite))
+                .withTextTint(color(R.color.black))
+                .withSelectedIconTint(color(R.color.purple))
+                .withSelectedTextTint(color(R.color.purple));
+
+
+
     }
     @ColorInt
     private int color(@ColorRes int res){

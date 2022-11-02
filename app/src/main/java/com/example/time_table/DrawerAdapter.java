@@ -2,10 +2,8 @@ package com.example.time_table;
 import android.util.*;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -13,12 +11,12 @@ import java.util.*;
 
 public class DrawerAdapter extends RecyclerView.Adapter<DrawerAdapter.ViewHolder> {
 
-     private List<Draweritem> items;
-     private Map<Class<? extends Draweritem>, Integer> viewTypes;
-     private SparseArray<Draweritem> holderfactories;
+     private List<DrawerItem> items;
+     private Map<Class<? extends DrawerItem>, Integer> viewTypes;
+     private SparseArray<DrawerItem> holderfactories;
      private OnItemSelectedListener listener;
 
-     public DrawerAdapter(List<Draweritem> items){
+     public DrawerAdapter(List<DrawerItem> items){
          this.items=items;
          this.viewTypes=new HashMap<>();
          this.holderfactories=new SparseArray<>();
@@ -27,7 +25,7 @@ public class DrawerAdapter extends RecyclerView.Adapter<DrawerAdapter.ViewHolder
 
     private void processViewTypes() {
          int type = 0;
-         for(Draweritem item : items){
+         for(DrawerItem item : items){
              if(!viewTypes.containsKey(item.getClass())){
                  viewTypes.put(item.getClass(),type);
                  holderfactories.put(type,item);
@@ -59,11 +57,11 @@ public class DrawerAdapter extends RecyclerView.Adapter<DrawerAdapter.ViewHolder
     }
 
     public void setSelected(int position){
-         Draweritem newChecked = items.get(position);
+         DrawerItem newChecked = items.get(position);
          if (!newChecked.isSelectable()){
              return;
          }
-         Draweritem item;
+         DrawerItem item;
          for(int i=0;i<items.size();i++){
              item = items.get(i);
              if(item.isChecked()){
